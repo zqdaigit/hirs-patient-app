@@ -1,0 +1,39 @@
+{
+  "cli": {
+    "version": ">= 3.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "simulator": false
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./credentials/android-service-account.json",
+        "track": "production"
+      },
+      "ios": {
+        "appleId": "developer@example.com",
+        "ascAppId": "000000000",
+        "ascAppIdIos": "000000000"
+      }
+    }
+  }
+}

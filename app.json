@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "HIRS患者端",
+    "slug": "hirs-patient-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4A90E2"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hirs.patient",
+      "buildNumber": "1",
+      "appStoreUrl": "https://apps.apple.com/app/hirs-patient/id000000000",
+      "infoPlist": {
+        "NSCameraUsageDescription": "需要使用相机拍摄训练照片",
+        "NSPhotoLibraryUsageDescription": "需要使用相册保存训练照片",
+        "NSLocationWhenInUseUsageDescription": "用于显示康复中心位置"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#4A90E2"
+      },
+      "package": "com.hirs.patient",
+      "versionCode": 1,
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hirs.patient",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-av",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "需要访问相册以保存训练照片",
+          "cameraPermission": "需要使用相机拍摄训练照片"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "用于显示康复中心位置"
+        }
+      ],
+      "expo-notifications"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "hirs-patient-app"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/hirs-patient-app"
+    }
+  }
+}
